@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1259a1",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#111921",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Lexend', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="flex flex-col min-h-screen">
+<!-- Header -->
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-20">
+<div class="flex items-center gap-4">
+<div class="bg-primary text-white p-2 rounded-lg">
+<span class="material-symbols-outlined text-2xl">school</span>
+</div>
+<div class="flex flex-col">
+<h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight">AGMHSS Patteeswaram</h2>
+<span class="text-xs text-primary font-medium tracking-wider uppercase">Innovation Hub</span>
+</div>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors" href="#">Projects</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors" href="#">Curriculum</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors" href="#">About</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors" href="#">Contact</a>
+</nav>
+<div class="flex items-center gap-4">
+<div class="relative hidden sm:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xl">search</span>
+<input class="pl-10 pr-4 py-2 bg-slate-200/50 dark:bg-slate-800/50 border-none rounded-lg focus:ring-2 focus:ring-primary w-48 lg:w-64 text-sm" placeholder="Search repositories..." type="text"/>
+</div>
+<button class="bg-primary text-white px-5 py-2.5 rounded-lg text-sm font-bold flex items-center gap-2 hover:bg-primary/90 transition-all">
+<span class="material-symbols-outlined text-xl">code</span>
+<span class="hidden sm:inline">GitHub Profile</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<main class="flex-grow">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
+<div class="max-w-2xl">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-bold mb-4 uppercase tracking-widest">
+                            Open Source Initiatives
+                        </div>
+<h1 class="text-4xl md:text-6xl font-black text-slate-900 dark:text-white mb-6 leading-[1.1]">
+                            GitHub Project <span class="text-primary">Showcase</span>
+</h1>
+<p class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+                            Discover innovative software solutions and academic tools developed by the community at AGMHSS Patteeswaram. Our open-source repositories range from educational games to advanced project management suites.
+                        </p>
+</div>
+<div class="flex gap-4">
+<button class="flex items-center justify-center gap-2 px-6 py-3 bg-slate-200 dark:bg-slate-800 text-slate-900 dark:text-white rounded-xl font-bold hover:bg-slate-300 dark:hover:bg-slate-700 transition-all">
+<span class="material-symbols-outlined">star</span>
+                            Follow
+                        </button>
+</div>
+</div>
+<!-- Tabs -->
+<div class="flex border-b border-slate-200 dark:border-slate-800 mb-10 overflow-x-auto no-scrollbar">
+<button class="px-6 py-4 text-sm font-bold text-primary border-b-2 border-primary whitespace-nowrap">All Repositories (6)</button>
+<button class="px-6 py-4 text-sm font-bold text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 whitespace-nowrap">Academic Tools</button>
+<button class="px-6 py-4 text-sm font-bold text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 whitespace-nowrap">Software Engineering</button>
+<button class="px-6 py-4 text-sm font-bold text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 whitespace-nowrap">Mathematics</button>
+</div>
+<!-- Projects Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Project 1 -->
+<div class="group bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all hover:-translate-y-1">
+<div class="h-48 bg-slate-100 dark:bg-slate-800 relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent"></div>
+<img class="w-full h-full object-cover mix-blend-overlay opacity-50" data-alt="Abstract visualization of seismic waves for earthquake study" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFglgIwS_Xvi-Ekp3MiHzrgVq6e0nVTvKchaqkxYstPi_144f-pPpPoqAPrrGpkyX8-qtBmbGYHl6HANGiiWRclUBafGLWzxgdfI-Yo7z2_jyI3S4QSSFjs764eSDomMBsqquhTev8aVT1rfs6xVxL8vYfw4JWbM7s-KE_C-nriloHReNZfhen7NGDoepHSyXljuMJsAdnZ0FM4X5Z9P9BWzwjym3Is6Z_lIeypow7J0ynb-Rne230hEBas5MoKWzj_Q8C_gNs1Dz6"/>
+<div class="absolute top-4 left-4 flex gap-2">
+<span class="px-2 py-1 bg-white/90 dark:bg-slate-900/90 text-[10px] font-bold rounded uppercase">Python</span>
+</div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-primary transition-colors line-clamp-1">phoenix_sidp</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6 line-clamp-2">
+                                Interactive textbook on Earthquake Science designed for secondary education students.
+                            </p>
+<a class="inline-flex items-center gap-2 text-primary text-sm font-bold group/link" href="#">
+                                View on GitHub
+                                <span class="material-symbols-outlined text-lg group-hover/link:translate-x-1 transition-transform">arrow_right_alt</span>
+</a>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="group bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all hover:-translate-y-1">
+<div class="h-48 bg-slate-100 dark:bg-slate-800 relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-transparent"></div>
+<img class="w-full h-full object-cover mix-blend-overlay opacity-50" data-alt="Math operations and numbers colorful interface background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4BxzRWNBQaVeXVLjbBf93Yfn0O3Y1bA_IgTFktUiKzL5n7DRRy-Bx-PrpAOQtwjKfao3LnlrFriw-sG0zgeNDCmVhpEc7kyP4wr4Mab3Wtz0Xfwc5-4roFID29vYFURSrRBTLfdsIWJ23e121DJVidBSoCQEVq4UoZ-TqsO4gi6itBoNO2dz7wGy4fhlemlqtP2JDQYuXxKLaD48YA-6raJ_3fCfmMuwl99SHOLPhXvYjw4v2BidHWVXY24orOQ3Z0QOPd2uwQwud"/>
+<div class="absolute top-4 left-4 flex gap-2">
+<span class="px-2 py-1 bg-white/90 dark:bg-slate-900/90 text-[10px] font-bold rounded uppercase">C++</span>
+</div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-primary transition-colors line-clamp-1">spl_arith_quiz</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6 line-clamp-2">
+                                A specialized arithmetic quiz application focused on mental math and competitive scoring.
+                            </p>
+<a class="inline-flex items-center gap-2 text-primary text-sm font-bold group/link" href="#">
+                                View on GitHub
+                                <span class="material-symbols-outlined text-lg group-hover/link:translate-x-1 transition-transform">arrow_right_alt</span>
+</a>
+</div>
+</div>
+<!-- Project 3 -->
+<div class="group bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all hover:-translate-y-1">
+<div class="h-48 bg-slate-100 dark:bg-slate-800 relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-br from-emerald-500/10 to-transparent"></div>
+<img class="w-full h-full object-cover mix-blend-overlay opacity-50" data-alt="Geometric nodes and data connection pattern" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBg3U1yFswBsfAeXfCk8y_WlFNoV0pnWxO2yEUPvIAaSN5xXL0rcgGUOt4xt3kHYMm3tdfBeZA0Zuhv_ARjBKZTTbg3Og2wVYElnn6VFgSx04FIL_HQDueXVBYdcWOzQngJlONP52MxUc8oCQ3UsoGfR4Zyvp3mxlrG8DWJjhe-j0Kw2dYDBIY41eY0etXr1T2WqPwbrEaG-f0HBtrYXo-ah9lOZjfbdSW9XPm7Qcq33cq1-zdHQjCffTX_iNxBlxo5W7_jL_y6tMDk"/>
+<div class="absolute top-4 left-4 flex gap-2">
+<span class="px-2 py-1 bg-white/90 dark:bg-slate-900/90 text-[10px] font-bold rounded uppercase">Rust</span>
+</div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-primary transition-colors line-clamp-1">spartan</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6 line-clamp-2">
+                                Advanced Project Management Suite for academic institutions and collaborative research.
+                            </p>
+<a class="inline-flex items-center gap-2 text-primary text-sm font-bold group/link" href="#">
+                                View on GitHub
+                                <span class="material-symbols-outlined text-lg group-hover/link:translate-x-1 transition-transform">arrow_right_alt</span>
+</a>
+</div>
+</div>
+<!-- Project 4 -->
+<div class="group bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all hover:-translate-y-1">
+<div class="h-48 bg-slate-100 dark:bg-slate-800 relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-transparent"></div>
+<img class="w-full h-full object-cover mix-blend-overlay opacity-50" data-alt="Grammar symbols and text structure illustration" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXvWG44jSsyi4QM7iBKtHq1yZwS9Q3m9N9wLwnUM7zA5huQbpmnJdjMlMOcOAWfPkX8bK2jdH-PkBvIP__ZF0EhWxVftobvMD8LFBF5cERF9mI9AG5uZDG5a_enrmxrsckpbwt83yCCH04q6VyW1vfQ0_WcpPvRZvXzXh0IgPEymAoDf5kAZ8SVo09oMaAMjUaLslaQX3XIKuv_Dfk8S90qPAsxXKTo9vUzhZe8ZJ-br4Sn0itLDtQRu7B0AyyrLnbVzxNyEIz7LCI"/>
+<div class="absolute top-4 left-4 flex gap-2">
+<span class="px-2 py-1 bg-white/90 dark:bg-slate-900/90 text-[10px] font-bold rounded uppercase">Gtk</span>
+</div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-primary transition-colors line-clamp-1">Gtk-Grammar-Test</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6 line-clamp-2">
+                                Desktop proficiency testing tool for evaluating English grammar and linguistic skills.
+                            </p>
+<a class="inline-flex items-center gap-2 text-primary text-sm font-bold group/link" href="#">
+                                View on GitHub
+                                <span class="material-symbols-outlined text-lg group-hover/link:translate-x-1 transition-transform">arrow_right_alt</span>
+</a>
+</div>
+</div>
+<!-- Project 5 -->
+<div class="group bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all hover:-translate-y-1">
+<div class="h-48 bg-slate-100 dark:bg-slate-800 relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-br from-amber-500/10 to-transparent"></div>
+<img class="w-full h-full object-cover mix-blend-overlay opacity-50" data-alt="Computational math library abstract grid background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIh9ddqW1ccZreO7C42TAxFtg2BA3TvO5u5dBGRsB4rUQZxfIekHZQgYUnrlCWkqvo6PkdtYmQtQZ0tNTtQPLIQApxNaX-L6uOPs29UK2-Uuq72ItP7QW1XfodPRTFaVl4b7SNr72fatNGpMUNpBLWm4JieOXYJaL5G_OKKY47oFHYR1ZcCJe6CitNf5mZxge2PhwkuhIp7GbbvFeVYVR-AAmxqJoUeYNRVG7hPRPt3iqMT_2XV1J4TyJ-KVsIk9jJHw9XtO43FyIr"/>
+<div class="absolute top-4 left-4 flex gap-2">
+<span class="px-2 py-1 bg-white/90 dark:bg-slate-900/90 text-[10px] font-bold rounded uppercase">Python</span>
+</div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-primary transition-colors line-clamp-1">spl_arith</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6 line-clamp-2">
+                                Core arithmetic operations library for building high-performance educational software.
+                            </p>
+<a class="inline-flex items-center gap-2 text-primary text-sm font-bold group/link" href="#">
+                                View on GitHub
+                                <span class="material-symbols-outlined text-lg group-hover/link:translate-x-1 transition-transform">arrow_right_alt</span>
+</a>
+</div>
+</div>
+<!-- Project 6 -->
+<div class="group bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all hover:-translate-y-1">
+<div class="h-48 bg-slate-100 dark:bg-slate-800 relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-br from-rose-500/10 to-transparent"></div>
+<img class="w-full h-full object-cover mix-blend-overlay opacity-50" data-alt="Technical engine and code modules pattern" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB54Xokx0hHveAVFXyXb_y2qu_2RIBZHwqOIrf0dGhf7auUu4ws08NdPG3Q_9_7nDKZyMmebdLs2xXSK_GM37XyDNPzOm_qlEu9NlrLaddYbRgasMrAPpuvK6NNsPuujKhXaWnkHczp2vFGQb-XrIrsE_5eYM1SOpy_hLDTE2EyEyTfOOcuKbWjM74UTINbOD3PW3qmIUlUluTcuZXY81kW4wy4zjvDOg5-SkbJbAKIz1r0uiA3j3AufbUrsTInFdeLo1tLq_IzKMXu"/>
+<div class="absolute top-4 left-4 flex gap-2">
+<span class="px-2 py-1 bg-white/90 dark:bg-slate-900/90 text-[10px] font-bold rounded uppercase">C</span>
+</div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-primary transition-colors line-clamp-1">gtk_grammar_test</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6 line-clamp-2">
+                                The engine core for grammar testing applications, optimized for multi-platform deployment.
+                            </p>
+<a class="inline-flex items-center gap-2 text-primary text-sm font-bold group/link" href="#">
+                                View on GitHub
+                                <span class="material-symbols-outlined text-lg group-hover/link:translate-x-1 transition-transform">arrow_right_alt</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Newsletter -->
+<div class="mt-24 rounded-3xl bg-slate-900 dark:bg-primary/20 p-8 md:p-16 text-center relative overflow-hidden">
+<div class="absolute top-0 right-0 p-8 text-white/5 opacity-20 pointer-events-none">
+<span class="material-symbols-outlined text-9xl">alternate_email</span>
+</div>
+<div class="relative z-10 max-w-2xl mx-auto">
+<h2 class="text-white text-3xl md:text-4xl font-black mb-4">Stay Synchronized</h2>
+<p class="text-slate-400 text-lg mb-8">Get notified when we push new repositories or major updates to our academic toolkit.</p>
+<form class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+<input class="flex-grow px-6 py-4 rounded-xl bg-white/10 border border-white/20 text-white placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-primary text-base" placeholder="Enter your email" type="email"/>
+<button class="bg-primary hover:bg-primary/90 text-white font-bold px-8 py-4 rounded-xl transition-all shadow-lg shadow-primary/20">
+                                Subscribe
+                            </button>
+</form>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-12">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+<div class="col-span-1 md:col-span-2">
+<div class="flex items-center gap-3 mb-6">
+<div class="bg-primary/10 text-primary p-1.5 rounded-lg">
+<span class="material-symbols-outlined text-xl">school</span>
+</div>
+<h3 class="text-slate-900 dark:text-white font-bold text-lg tracking-tight">AGMHSS Patteeswaram</h3>
+</div>
+<p class="text-slate-500 dark:text-slate-400 max-w-sm mb-6 leading-relaxed text-sm">
+                            Empowering students through technology and open-source collaboration. Building the future of education, one repository at a time.
+                        </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-500 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">share</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-500 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">public</span>
+</a>
+</div>
+</div>
+<div>
+<h4 class="text-slate-900 dark:text-white font-bold mb-6 text-sm uppercase tracking-wider">Resources</h4>
+<ul class="space-y-4 text-sm text-slate-500 dark:text-slate-400">
+<li><a class="hover:text-primary transition-colors" href="#">Documentation</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">API Reference</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Academic Papers</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Community</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-slate-900 dark:text-white font-bold mb-6 text-sm uppercase tracking-wider">Institution</h4>
+<ul class="space-y-4 text-sm text-slate-500 dark:text-slate-400">
+<li><a class="hover:text-primary transition-colors" href="#">Our Vision</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Careers</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Contact Us</a></li>
+</ul>
+</div>
+</div>
+<div class="pt-8 border-t border-slate-200 dark:border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-slate-500 dark:text-slate-400 text-xs">
+                        © 2024 AGMHSS Patteeswaram. All rights reserved.
+                    </p>
+<div class="flex gap-8 text-xs text-slate-500 dark:text-slate-400 font-medium">
+<a class="hover:text-primary" href="#">Status</a>
+<a class="hover:text-primary" href="#">Legal</a>
+<a class="hover:text-primary" href="#">Cookies</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+</body></html>
+
+
